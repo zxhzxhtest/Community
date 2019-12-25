@@ -12,24 +12,11 @@ import javax.websocket.server.PathParam;
 public class Hello {
 
 
-    @RequestMapping("/hello")
-    public String hello(@RequestParam("name") String name){
 
-        if(name.equals("aaa")){
-            System.out.println("成功");
-            return "success";
-        }
+    @RequestMapping("/")
+    public String hello2(){
 
-        else{
-            return "false";
-        }
 
-    }
-
-    @RequestMapping("/helll")
-    public String hello2(@RequestParam("name") String name, Model model){
-
-        model.addAttribute("name",name);
-        return "success";
+        return "index";
     }
 }
